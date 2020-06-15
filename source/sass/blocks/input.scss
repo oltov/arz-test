@@ -1,0 +1,55 @@
+.input {
+  margin-top: 20px;
+  font-family: "Formular", "Arial", sans-serif;
+
+  &--top {
+    margin-top: 0;
+  }
+
+  &__field {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    font-family: inherit;
+    margin-bottom: 15px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--title {
+      font-size: 20px;
+      font-family: "Formular-bold", "Arial", sans-serif;
+
+      &::placeholder {
+        color: #000000;
+      }
+    }
+
+    &--subtitle {
+      font-size: 16px;
+    }
+
+    &--link {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .input {
+    &__field {
+      &--title {
+        font-size: 14px;
+      }
+
+      &--subtitle {
+        font-size: 12px;
+      }
+
+      &--link {
+        font-size: 10px;
+      }
+    }
+  }
+}

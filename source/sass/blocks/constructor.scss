@@ -1,0 +1,27 @@
+.constructor {
+  margin: 0 auto;
+  max-width: 660px;
+
+  &--result {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-family: "Formular-bold", "Arial", sans-serif;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 690px) {
+  .constructor {
+    margin: 0 16px;
+
+    &--result {
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+}

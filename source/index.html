@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Project Name - description">
+  <title>Тестовое задание - Арзамас</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<header class="header">
+  <h1 class="header__title">Генератор врезов</h1>
+  <p class="header__version">Версия 0.2.4</p>
+</header>
+<body>
+  <main>
+    <div class="constructor">
+      <h2 class="constructor__title">Конструктор:</h2>
+      <div class="article">
+        <div class="article__inner" id="article-constructor">
+          <div class="article__inputs-wrapper">
+            <div class="input input--top">
+              <input
+                class="input__field"
+                placeholder="Введите заголовок своего блока"
+                id="constructor-top-title"
+              >
+              <input
+                class="input__field"
+                placeholder="Сюда вставте ссылку на материал"
+                id="input-link"
+              >
+            </div>
+            <div class="button">
+              <button class="button__tab">Получить заголовок</button>
+              <button class="button__tab">Получить подзаголовок</button>
+              <button class="button__tab" id="format-link">Отобразить ссылку</button>
+            </div>
+            <div class="input" id="input-fields">
+              <input class="input__field input__field--title" placeholder="Введите заголовок материала">
+              <input class="input__field input__field--subtitle" placeholder="Введите подзаголовок материала">
+              <input class="input__field input__field--link" placeholder="Отредактировать отображаемую ссылку">
+            </div>
+          </div>
+        </div>
+        <div class="button button--constructor">
+          <button class="button__tab" id="add-article">Добавить материал</button>
+          <button class="button__tab" id="remove-article">Удалить материал</button>
+          <button class="button__tab" id="look-article">Посмотреть резальтат</button>
+        </div>
+      </div>
+    </div>
+    <div class="constructor constructor--result" id="result">
+      <h2 class="constructor__title">Результат:</h2>
+      <div class="article article--result" id="result-article">
+        <h2 class="article__top-title" id="result-top-title">введите заголовок всего блока</h2>
+        <a data-content="false" class="article__link" rel="stylesheet" id="link-article" target="_blank">
+          <span class="article__title--warning" id="link-warning">Укажите ссылку!</span>
+          <h3 data-content="false" class="article__title article__title--warning">Введите заголовок</h3>
+          <p class="article__subtitle"></p>
+          <span class="article__description article__description--result"></span>
+        </a>
+      </div>
+      <div class="button button--copy">
+        <button class="button__tab">Скопировать html</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- блок для нового материала -->
+  <template id="new-article">
+    <div class="article__inputs-wrapper">
+      <div class="input input--top">
+        <input
+          class="input__field"
+          placeholder="Сюда вставте ссылку на материал"
+          id="input-link"
+        >
+      </div>
+      <div class="button">
+        <button class="button__tab">Получить заголовок</button>
+        <button class="button__tab">Получить подзаголовок</button>
+        <button class="button__tab" id="format-link">Отобразить ссылку</button>
+      </div>
+      <div class="input" id="input-fields">
+        <input class="input__field input__field--title" placeholder="Введите заголовок материала">
+        <input class="input__field input__field--subtitle" placeholder="Введите подзаголовок материала">
+        <input class="input__field input__field--link" placeholder="Отредактировать отображаемую ссылку">
+      </div>
+    </div>
+  </template>
+
+    <!-- ссылка на статью -->
+
+  <template id="link-to-article">
+    <a data-content="false" class="article__link" rel="stylesheet" id="link-article" target="_blank">
+      <span class="article__title--warning" id="link-warning">Укажите ссылку!</span>
+      <h3 data-content="false" class="article__title article__title--warning">Введите заголовок</h3>
+      <p class="article__subtitle"></p>
+      <span class="article__description article__description--result"></span>
+    </a>
+  </template>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

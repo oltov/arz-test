@@ -27,7 +27,6 @@ const init = () => {
         alert(`Не все поля корретно заполнены. Копирование не выполнено.`);
         btnCopy.setAttribute(`style`, `display: none;`);
       }
-      validateIsActive = true;
     });
   };
 

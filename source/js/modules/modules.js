@@ -136,8 +136,8 @@ const init = () => {
   // связывание инпутов конструктора и полей с результатами
 
   const controlInputs = () => {
-    const fields = document.querySelectorAll(`#input-fields`);
-    const linkTitles = document.querySelectorAll(`#link-article`);
+    const fields = document.querySelectorAll(`[data-input-fields]`);
+    const linkTitles = document.querySelectorAll(`[data-link-article]`);
 
     for (let i = 0; i < fields.length; i++) {
       const inputTitle = fields[i].querySelector(`.input__field--title`);
@@ -177,13 +177,13 @@ const init = () => {
 
   const formatingLink = () => {
     const bloksConstructor = document.querySelectorAll(`.article__inputs-wrapper`);
-    const linksDescription = document.querySelectorAll(`#link-article`);
+    const linksDescription = document.querySelectorAll(`[data-link-article]`);
 
     for (let i = 0; i < bloksConstructor.length; i++) {
-      const btn = bloksConstructor[i].querySelector(`#format-link`);
+      const btn = bloksConstructor[i].querySelector(`[data-format-link]`);
       const nodeDes = linksDescription[i].querySelector(`.article__description`);
-      const field = bloksConstructor[i].querySelector(`#input-link`);
-      const warningElement = linksDescription[i].querySelector(`#link-warning`);
+      const field = bloksConstructor[i].querySelector(`[data-input-link]`);
+      const warningElement = linksDescription[i].querySelector(`[data-link-warning]`);
 
       btn.addEventListener(`click`, () => {
         const isContent = urlRegexp.test(field.value.trim());
